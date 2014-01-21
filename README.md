@@ -1,8 +1,8 @@
-# Sinatra Sandbox 
- 
-##Learning Competencies 
+# Sinatra Sandbox
 
-##Summary 
+##Learning Competencies
+
+##Summary
 
  We're going to build ourselves a Sinatra sandbox that we can use to better understand the flow of data through a web application.
 
@@ -103,11 +103,11 @@ If you do this enough, you'll be very very clear on what you understand and what
 
 ### Submit!
 
-Having at least partially answered a few of your own questions, submit your gist! 
+Having at least partially answered a few of your own questions, submit your gist!
 
 ##Releases
-###Release 0 
+###Release 0
 
-##Optimize Your Learning 
+##Optimize Your Learning
 
 ##Resources
