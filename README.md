@@ -115,12 +115,14 @@ How does this impact the `params` hash on the server side?
 ### Release 4: Question and Wonder
 
 The immortal San Francisco native [Bruce Lee][enter the dragon] pointed out
-that focusing on the task at hand is to miss the importance of the lesson.
-Take some time and reflect upon the request cycle, the request object, the
-`ENV` hash.  Can you act and interact with these things inside of your
-controllers, inside of your templates?  What happens if you create an instance
-variable in a Sinatra responder block, can you see that instance variable in
-the view?
+that betimes focusing on the task at hand causes one to miss the importance of
+the lesson.  Take some time and reflect upon the request cycle, the request
+object, the `ENV` hash.  Can you act and interact with these things inside of
+your controllers, inside of your templates?  What happens if you create an
+instance variable in a Sinatra responder block, can you see that instance
+variable in the view?  Sinatra is a web application framework that conforms to
+the [Rack middleware][].  What's a "middleware?"  What's [Rack][Rack
+middleware]?
 
 Add a file that has a list of 5-10 questions you have about how Sinatra
 applications, the web, web applications in general, HTML forms, etc. work.
@@ -191,3 +193,4 @@ SHORTCHANGE THESE SKILLS**.
 [Radio buttons]: http://www.echoecho.com/htmlforms10.htm
 [Checkbox buttons]: http://www.echoecho.com/htmlforms09.htm
 [Select box]: http://www.echoecho.com/htmlforms11.htm
+[Rack middleware]: http://rack.github.io/
