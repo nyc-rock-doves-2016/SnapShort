@@ -147,9 +147,8 @@ an exact answer.
 Even if you answer one small question you'll be closer to understanding how the
 whole machine works.
 
-If it helps, we're really asking you to use the [scientific
-method](http://en.wikipedia.org/wiki/Scientific_method) to investigate how this
-opaque system called "a web application" operates.
+If it helps, we're really asking you to use the [scientific method][] to
+investigate how this opaque system called "a web application" operates.
 
 Don't roll your eyes.  Yes, you may have learned about it in the 2nd grade, but
 you'll be surprised how many developers psych themselves out and forget the
@@ -194,3 +193,4 @@ SHORTCHANGE THESE SKILLS**.
 [Checkbox buttons]: http://www.echoecho.com/htmlforms09.htm
 [Select box]: http://www.echoecho.com/htmlforms11.htm
 [Rack middleware]: http://rack.github.io/
+[scientific method]: http://en.wikipedia.org/wiki/Scientific_method
