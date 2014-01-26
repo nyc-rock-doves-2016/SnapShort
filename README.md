@@ -2,8 +2,8 @@
 
 ## Learning Competencies
 
-* observe the flow of data through a web application as initiated by a request
-* describe where rendering occurs in the the stack request cycle
+* map the flow of data through a web application
+* describe where rendering occurs in the stack request cycle
 
 ## Summary
 
