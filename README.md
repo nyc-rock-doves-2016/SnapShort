@@ -16,7 +16,7 @@ challenges as well as Rails (which is built on the *exact same* middleware
 stack as Sinatra).  Master walking so that you might run faster.
 
 As always, you may choose to exend your extant Sinatra application or start
-anew with the skeleton provided in `/source`.
+anew with the skeleton provided in this challenge.
 
 ## Releases
 
