@@ -52,27 +52,27 @@ In your controller code, add the following routes:
 
 ```ruby
 get '/' do
-  puts "[LOG] Getting /"
+  puts "[LOG] Responding to a GET request for /"
   puts "[LOG] Params: #{params.inspect}"
   erb :index
 end
 
-get '/cool_url' do
-  puts "[LOG] Getting /cool_url"
+get '/sandbox' do
+  puts "[LOG] Responding to a GET request for /sandbox"
   puts "[LOG] Params: #{params.inspect}"
-  erb :get_cool_url
+  erb :get_sandbox
 end
 
-post '/cool_url' do
-  puts "[LOG] Posting to /cool_url"
+post '/sandbox' do
+  puts "[LOG] Responding to a POST request to /sandbox"
   puts "[LOG] Params: #{params.inspect}"
-  erb :post_cool_url
+  erb :post_sandbox
 end
 ```
 
-Create `index`, `get_cool_url`, and `post_cool_url` views.  The `get_cool_url`
-and `post_cool_url` views can contain whatever you want to make it easier for
-you to explore how Sinatra, forms, and the HTTP request cycle works.  Can you
+Create `index`, `get_sandbox`, and `post_sandbox` views.  The `get_sandbox`
+and `post_sandbox` views can contain whatever you want to make it easier for
+you to explore how Sinatra, forms, and the HTTP request cycle works. Can you
 ask one of your views to print out all of the instance variables it knows
 about?  Can you ask the view to ask what kind of class it is?  Don't forget,
 just because you're in a web app you still have all the power and beauty of
@@ -85,8 +85,8 @@ Create a simple page with two forms in the `index` view.  It should have one
 text field; you can call it whatever you want.  It should also have a submit
 button.
 
-The first form should submit a `GET` request to `/cool_url`.  The second form
-should submit a `POST` request to `/cool_url`.
+The first form should submit a `GET` request to `/sandbox`.  The second form
+should submit a `POST` request to `/sandbox`.
 
 ### Release 2: Add More Form Elements
 
