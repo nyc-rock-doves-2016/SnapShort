@@ -72,14 +72,19 @@ end
 
 Create `index`, `get_sandbox`, and `post_sandbox` views.  The `get_sandbox`
 and `post_sandbox` views can contain whatever you want to make it easier for
-you to explore how Sinatra, forms, and the HTTP request cycle works. Can you
-ask one of your views to print out all of the instance variables it knows
-about?  Can you ask the view to ask what kind of class it is?  Don't forget,
-just because you're in a web app you still have all the power and beauty of
-Ruby's [introspective][] capabilities.  What happens if you print out the
-contents of those instance variables' innards by using [`#inspect`][inspect].
-This challenge encouraged you to explore and these sorts of questions are the
-ones you should be asking yourself and each other.
+you to explore how Sinatra, forms, and the HTTP request cycle works.
+
+* Can you ask one of your views to print out all of the instance variables it
+  knows about? Test your approach by creating new instance variables in your
+controller and see if they appear in your listing.
+* Can you ask the view to ask what kind of class it is?
+* What happens to instance variables after each request?
+
+Don't forget, just because you're in a web app you still have all the power and
+beauty of Ruby's [introspective][] capabilities.  What happens if you print out
+the contents of those instance variables' innards by using
+[`#inspect`][inspect].  This challenge encouraged you to explore and these
+sorts of questions are the ones you should be asking yourself and each other.
 
 Create a simple page with two forms in the `index` view.  It should have one
 text field; you can call it whatever you want.  It should also have a submit
@@ -90,7 +95,8 @@ should submit a `POST` request to `/sandbox`.
 
 ### Release 2: Add More Form Elements
 
-Explore what happens when you add other kinds of form elements to your form.  Add fields of the following types:
+Explore what happens when you add other kinds of form elements to your form.
+Add fields of the following types:
 
 * [Textarea][]
 * [Radio buttons][]
@@ -115,7 +121,7 @@ How does this impact the `params` hash on the server side?
 ### Release 4: Question and Wonder
 
 The immortal San Francisco native [Bruce Lee][enter the dragon] pointed out
-that betimes focusing on the task at hand causes one to miss the importance of
+that at times focusing on the task at hand causes one to miss the importance of
 the lesson.  Take some time and reflect upon the request cycle, the request
 object, the `ENV` hash.  Can you act and interact with these things inside of
 your controllers, inside of your templates?  What happens if you create an
