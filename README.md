@@ -16,7 +16,7 @@ challenges as well as Rails (which is built on the *exact same* middleware
 stack as Sinatra).  Master walking so that you might run faster.
 
 As always, you may choose to exend your extant Sinatra application or start
-anew with the skeleton provided in `/source`.
+anew with the skeleton provided in this challenge.
 
 ## Releases
 
@@ -52,45 +52,51 @@ In your controller code, add the following routes:
 
 ```ruby
 get '/' do
-  puts "[LOG] Getting /"
+  puts "[LOG] Responding to a GET request for /"
   puts "[LOG] Params: #{params.inspect}"
   erb :index
 end
 
-get '/cool_url' do
-  puts "[LOG] Getting /cool_url"
+get '/sandbox' do
+  puts "[LOG] Responding to a GET request for /sandbox"
   puts "[LOG] Params: #{params.inspect}"
-  erb :get_cool_url
+  erb :get_sandbox
 end
 
-post '/cool_url' do
-  puts "[LOG] Posting to /cool_url"
+post '/sandbox' do
+  puts "[LOG] Responding to a POST request to /sandbox"
   puts "[LOG] Params: #{params.inspect}"
-  erb :post_cool_url
+  erb :post_sandbox
 end
 ```
 
-Create `index`, `get_cool_url`, and `post_cool_url` views.  The `get_cool_url`
-and `post_cool_url` views can contain whatever you want to make it easier for
-you to explore how Sinatra, forms, and the HTTP request cycle works.  Can you
-ask one of your views to print out all of the instance variables it knows
-about?  Can you ask the view to ask what kind of class it is?  Don't forget,
-just because you're in a web app you still have all the power and beauty of
-Ruby's [introspective][] capabilities.  What happens if you print out the
-contents of those instance variables' innards by using [`#inspect`][inspect].
-This challenge encouraged you to explore and these sorts of questions are the
-ones you should be asking yourself and each other.
+Create `index`, `get_sandbox`, and `post_sandbox` views.  The `get_sandbox`
+and `post_sandbox` views can contain whatever you want to make it easier for
+you to explore how Sinatra, forms, and the HTTP request cycle works.
+
+* Can you ask one of your views to print out all of the instance variables it
+  knows about? Test your approach by creating new instance variables in your
+controller and see if they appear in your listing.
+* Can you ask the view to ask what kind of class it is?
+* What happens to instance variables after each request?
+
+Don't forget, just because you're in a web app you still have all the power and
+beauty of Ruby's [introspective][] capabilities.  What happens if you print out
+the contents of those instance variables' innards by using
+[`#inspect`][inspect].  This challenge encouraged you to explore and these
+sorts of questions are the ones you should be asking yourself and each other.
 
 Create a simple page with two forms in the `index` view.  It should have one
 text field; you can call it whatever you want.  It should also have a submit
 button.
 
-The first form should submit a `GET` request to `/cool_url`.  The second form
-should submit a `POST` request to `/cool_url`.
+The first form should submit a `GET` request to `/sandbox`.  The second form
+should submit a `POST` request to `/sandbox`.
 
 ### Release 2: Add More Form Elements
 
-Explore what happens when you add other kinds of form elements to your form.  Add fields of the following types:
+Explore what happens when you add other kinds of form elements to your form.
+Add fields of the following types:
 
 * [Textarea][]
 * [Radio buttons][]
@@ -115,7 +121,7 @@ How does this impact the `params` hash on the server side?
 ### Release 4: Question and Wonder
 
 The immortal San Francisco native [Bruce Lee][enter the dragon] pointed out
-that betimes focusing on the task at hand causes one to miss the importance of
+that at times focusing on the task at hand causes one to miss the importance of
 the lesson.  Take some time and reflect upon the request cycle, the request
 object, the `ENV` hash.  Can you act and interact with these things inside of
 your controllers, inside of your templates?  What happens if you create an
