@@ -194,9 +194,9 @@ SHORTCHANGE THESE SKILLS**.
 [binary search]: http://cl.ly/2n3D2V0R0L2f/download/sinatra_skeleton.zip
 [introspective]: http://en.wikipedia.org/wiki/Type_introspection#Ruby
 [inspect]: http://en.wikipedia.org/wiki/Type_introspection#Ruby
-[Textarea]: http://www.echoecho.com/htmlforms08.htm
-[Radio buttons]: http://www.echoecho.com/htmlforms10.htm
-[Checkbox buttons]: http://www.echoecho.com/htmlforms09.htm
-[Select box]: http://www.echoecho.com/htmlforms11.htm
+[Textarea]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
+[Radio buttons]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/radio
+[Checkbox buttons]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/checkbox
+[Select box]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 [Rack middleware]: http://rack.github.io/
 [scientific method]: http://en.wikipedia.org/wiki/Scientific_method
