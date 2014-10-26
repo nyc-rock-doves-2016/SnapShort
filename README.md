@@ -127,8 +127,10 @@ object, the `ENV` hash.  Can you act and interact with these things inside of
 your controllers, inside of your templates?  What happens if you create an
 instance variable in a Sinatra responder block, can you see that instance
 variable in the view?  Sinatra is a web application framework that conforms to
-the [Rack middleware][].  What's a "middleware?"  What's [Rack][Rack
-middleware]?
+the [Rack middleware][].  What's a "middleware?"  What's _[Rack middleware][]_?
+All of these are questions that _you_ as a developer should ask _as you learn_
+**and** that you should follow up on understanding, at least at a cursory
+level.
 
 Add a file that has a list of 5-10 questions you have about how Sinatra
 applications, the web, web applications in general, HTML forms, etc. work.
