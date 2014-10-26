@@ -197,8 +197,8 @@ SHORTCHANGE THESE SKILLS**.
 [introspective]: http://en.wikipedia.org/wiki/Type_introspection#Ruby
 [inspect]: http://en.wikipedia.org/wiki/Type_introspection#Ruby
 [Textarea]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea
-[Radio buttons]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/radio
-[Checkbox buttons]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/checkbox
+[Radio buttons]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+[Checkbox buttons]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
 [Select box]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select
 [Rack middleware]: http://rack.github.io/
 [scientific method]: http://en.wikipedia.org/wiki/Scientific_method
