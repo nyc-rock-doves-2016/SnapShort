@@ -125,7 +125,7 @@ that at times focusing on the task at hand causes one to miss the importance of
 the lesson.  Take some time and reflect upon the request cycle, the request
 object, the `ENV` hash.  Can you act and interact with these things inside of
 your controllers, inside of your templates?  What happens if you create an
-instance variable in a Sinatra responder block, can you see that instance
+instance variable in a Sinatra route handler, can you see that instance
 variable in the view?  Sinatra is a web application framework that conforms to
 the [Rack middleware][].  What's a "middleware?"  What's _[Rack middleware][]_?
 All of these are questions that _you_ as a developer should ask _as you learn_
