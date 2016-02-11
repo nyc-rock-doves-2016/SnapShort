@@ -46,7 +46,7 @@ melancholy where the debugger will lament that the author didn't write nice OO
 code, honor the Single Responsibility Principle or committed some other easily
 refactored sin.
 
-### Release 1: Build a Dummy App
+### Release 1: Build a Simple Application
 
 In your controller code, add the following routes:
 
