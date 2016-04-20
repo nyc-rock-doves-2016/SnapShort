@@ -1,6 +1,8 @@
 <%= @prompt.title %>
 <%= @prompt.optional %>
 
+<a href="/prompts/<%=@prompt.id%>/shorts"></a>
+
 <form action="/prompts/<%= @prompt.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="Delete">
