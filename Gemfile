@@ -1,4 +1,4 @@
-ruby '2.0.0'
+ruby '2.2.3'
 source 'https://rubygems.org'
 
 # PostgreSQL driver
@@ -13,6 +13,7 @@ gem 'thin'
 
 gem 'activesupport', '~>4.1'
 gem 'activerecord', '~>4.1'
+gem 'bcrypt'
 
 gem 'rake'
 
