@@ -1,0 +1,50 @@
+Users:
+get '/users/new' -registration
+post '/users' -create
+get 'users/id' -show
+get 'users/id/edit' -edit page
+put 'users/id' -update
+delete 'users/id' -delete
+
+
+
+Sessions
+get /login' -to login page
+post /login' -create session
+get '/logout' -logout
+
+
+
+Prompts:
+get '/prompts' -index
+get 'prompts/new' -prompt creation page
+post 'prompts' - create
+get 'prompts/id' - show (include shorts form -- 'post /prompts/:id/shorts')
+delete 'prompts/id' - delete
+
+
+
+Shorts:
+post 'prompts/:id/shorts' - create short
+get 'shorts/id' = show
+delete 'shorts/id' - delete
+
+
+
+Comments:
+get 'prompts/:id/comments' -index
+post 'prompts/:id/comments -create comment
+
+get 'shorts/:id/comments' -index
+post 'shorts/:id/comments -create comment
+
+delete 'comments/id' -delete
+
+
+
+Votes:
+post 'prompts/:id/comments -create comment
+post 'shorts/:id/shorts -create comment
+
+
+
