@@ -1,0 +1,8 @@
+<h3><%= @short.prompt %></h3>
+
+<p><%= @short.body %></p>
+
+<form action="/shorts/<%= @short.id %>" method="POST">
+  <input type="hidden" name="_method" value="Delete">
+  <button type="submit">Delete</button>
+</form>
