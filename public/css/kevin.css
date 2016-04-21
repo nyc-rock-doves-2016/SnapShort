@@ -48,7 +48,13 @@ footer {
 }
 
 
+.prompt-form {
+  margin: 40px auto;
+}
 
+textarea {
+  height: 150px;
+}
 
 
 
