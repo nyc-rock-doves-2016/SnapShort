@@ -1,11 +1,21 @@
 get '/prompts/:id/comments' do
   @prompt = Prompt.find(params[:id])
-  erb :'comments/index'
+  @user = User.find_by(id: session[:id])
+  if logged_in?
+    erb :'comments/index'
+  else
+    redirect '/login'
+  end
 end
 
 get '/shorts/:id/comments' do
   @short = Short.find(params[:id])
-  erb :'comments/index'
+  @user = User.find_by(id: session[:id])
+  if logged_in?
+    erb :'comments/index'
+  else
+    redirect '/login'
+  end
 end
 
 post '/prompts/:id/comments' do

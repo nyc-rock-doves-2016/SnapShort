@@ -1,7 +1,11 @@
 get '/prompts/:id/shorts' do
 	@prompt = Prompt.find(params[:id])
 	@user = User.find_by(id: session[:id])
-	erb :'shorts/new'
+  if logged_in?
+    erb :'shorts/new'
+  else
+    redirect '/login'
+  end
 end
 
 post '/prompts/:id/shorts' do
