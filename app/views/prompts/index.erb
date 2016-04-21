@@ -1,7 +1,9 @@
-<a href="/prompts/new">Add a new prompt </a>
+<a class="create-link" href="/prompts/new">Add a new prompt </a>
 <br>
 <% @prompts.each do |prompt| %>
-  <a href="/prompts/<%= prompt.id %>"><%= prompt.title %></a><br>
+  <div class="prompt-container">
+	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a><br>
+	</div>
 <% end %>
 
 
