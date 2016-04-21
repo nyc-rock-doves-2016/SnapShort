@@ -1,0 +1,28 @@
+.edit-account {
+  margin-top: 15em;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 1.5em;
+  height: 80px;
+  font-size: 65px
+}
+
+.user-prompts {
+  height: 70px;
+  font-size: 20px
+}
+
+.user-shorts {
+  height: 70px;
+  font-size: 20px
+}
+
+a:hover {
+    color: orange;
+}
+
+a {
+  color: #000000;
+}
