@@ -14,9 +14,12 @@
       </form>
     </div>
 
-    <h2><%= @prompt.title %></h2><span>Created by: <%= @prompt.creator.username %></span>
-    Instructions: <%= @prompt.optional %>
+    <span class="prompt-title"><%= @prompt.title %></span><span class="created">Created by: <%= @prompt.creator.username %></span>
   </div>
+
+  <% if @prompt.optional %>
+    <span class="instructions">Instructions: <%= @prompt.optional %></span>
+  <% end %>
 
   <div class="link-container">
   	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
@@ -26,25 +29,25 @@
 </div>
 
 
+<div class="all-shorts">
+  <% @prompt.shorts.each do |short| %>
+  	<div class="short-container">
+      <div class="vote-buttons">
+      <form method="post" action="/shorts/<%= short.id %>/votes">
+        <button class="upvote" type="submit">&#65514;</button>
+        <input type="hidden" name="vote[value]" value="1">
+      </form>
+      <span><%= short.points %></span>
+      <form method="post" action="/shorts/<%= short.id %>/votes">
+        <button class="downvote" type="submit">&#65516;</button>
+        <input type="hidden" name="vote[value]" value="-1">
+      </form>
+    </div>
 
-<% @prompt.shorts.each do |short| %>
-	<div class="short-container">
-    <div class="vote-buttons">
-    <form method="post" action="/shorts/<%= short.id %>/votes">
-      <button class="upvote" type="submit">&#65514;</button>
-      <input type="hidden" name="vote[value]" value="1">
-    </form>
-    <span><%= short.points %></span>
-    <form method="post" action="/shorts/<%= short.id %>/votes">
-      <button type="submit">&#65516;</button>
-      <input class="downvote" type="hidden" name="vote[value]" value="-1">
-    </form>
-  </div>
-
-  <%= short.body %>
-  <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
-<% end %>
-
+    <%= short.body %>
+    <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
+  <% end %>
+</div>
 
 <form class="delete" action="/prompts/<%= @prompt.id %>" method="post">
   <input type="hidden" name="_method" value="delete">

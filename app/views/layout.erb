@@ -32,8 +32,10 @@
 <body>
 
   <header>
+    <div class="logo-title">
     <img class="logo" src="/images/snapshort_logo.png" alt="SnapShort">
     <a href='/' class="main-title">SnapShort</a>
+  </div>
     <nav>
       <% if logged_in? %>
         <a class="main-link" href="/users/<%= session[:id] %>"><%= current_user.username.upcase %></a>

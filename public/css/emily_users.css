@@ -3,7 +3,7 @@
   text-align: center;
 }
 
-h2 {
+.hey {
   margin-top: 1.5em;
   height: 80px;
   font-size: 65px
@@ -23,6 +23,6 @@ a:hover {
     color: orange;
 }
 
-a {
+.prompt-link, .short-link {
   color: #000000;
 }

@@ -4,12 +4,12 @@ body {
 }
 
 footer {
-  border-top: 1px black solid;
   padding-top: 20px;
 }
 
 .all-prompts {
   margin: 20px 0px 0px 0px;
+  border-bottom: 0.5px solid black;
 }
 
 .prompt-snippet {
@@ -47,7 +47,6 @@ footer {
   color: orange;
 }
 
-
 .prompt-form {
   margin: 40px auto;
 }
@@ -62,15 +61,66 @@ textarea {
   color: black;
   padding: 5px;
   border-radius: 5px;
-  margin: auto;
-  text-align: center;
-  margin: 10px;
+  margin: 20px 0px;
 }
 
 .create-link:hover {
   background-color: gray;
   color: white;
 }
+
+.vote-buttons {
+  display: inline-block;
+  height: 115px;
+  border: 1px solid black;
+  float: left;
+
+}
+
+.upvote, .downvote {
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+.prompt-title {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0px;
+}
+
+.prompt-container {
+  margin-bottom: 25px;
+  height: 150px;
+  text-align: center;
+  border: 0.5px solid black;
+}
+
+.created {
+  float: right;
+  bottom: 0;
+}
+
+.instructions {
+  display: inline-block;
+  margin: 20px 0px;
+}
+
+.link-container {
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+
+.all-shorts {
+  padding: 25px 0px;
+  margin: 20px 0px;
+}
+
+
+
+
 
 
 

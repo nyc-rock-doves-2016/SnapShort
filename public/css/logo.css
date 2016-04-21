@@ -3,13 +3,23 @@
 	width: auto;
 	max-width: 100px;
 	max-height: 100px;
+  display: inline;
+  position: absolute;
+  margin-top: 40px;
 }
 
 .main-title {
 	color: #666666;
 	font-size: 2em;
+  margin-top: 85px;
+  position: absolute;
+  margin-left: 110px;
 }
 
 .main-title:hover {
 	color: black;
+}
+
+.logo-title {
+  height: 100px;
 }
