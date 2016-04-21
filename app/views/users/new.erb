@@ -3,8 +3,8 @@
 <%= erb :_errors, locals: {errors: @errors} %>
 
 <form method="post" action="/users">
-  <input type="text" name="username" placeholder="Create a Username">
-  <input type="email" name="email" placeholder="Email: email@example.com">
-  <input type="email" name="email" placeholder="Create Password">
+  <input type="text" name="user[username]" placeholder="Create a Username">
+  <input type="email" name="user[email]" placeholder="Email: email@example.com">
+  <input type="password" name="user[password]" placeholder="Create Password">
   <input type="submit" value="Register">
 </form>

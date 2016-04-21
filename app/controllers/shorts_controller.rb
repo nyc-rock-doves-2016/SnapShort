@@ -1,5 +1,11 @@
+get '/prompts/:id/shorts' do
+	@prompt = Prompt.find(params[:id])
+	@user = User.find_by(id: session[:id])
+	erb :'shorts/new'
+end
+
 post '/prompts/:id/shorts' do
-	@prompt = Prompt.find(params[:id]) 
+	@prompt = Prompt.find(params[:id])
 	@short = Short.new(params[:short])
 
 	if @short.save
@@ -9,12 +15,12 @@ post '/prompts/:id/shorts' do
 	end
 end
 
-get '/shorts/:id' do 
+get '/shorts/:id' do
 	@short = Short.find(params[:id])
 	erb :'/shorts/show'
 end
 
-delete '/shorts/:id' do 
+delete '/shorts/:id' do
 	@short = Short.find(params[:id])
 	@short.destroy
 	redirect '/prompts'

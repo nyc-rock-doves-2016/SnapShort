@@ -4,6 +4,7 @@
   <br>
  <!--  <label for="content">Body:</label> -->
   <textarea name="prompt[optional]" placeholder="Optional: add additional instructions" id=""></textarea>
+  <input type="hidden" name="prompt[creator_id]" value="<%= @user.id %>">
   <br>
   <input type="submit" value="Post Prompt">
 </form>
