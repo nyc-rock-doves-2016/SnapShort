@@ -1,37 +1,48 @@
 <div class="prompt-details">
+
   <div class="prompt-container">
+
     <div class="vote-buttons">
       <form method="post" action="/prompts/<%= @prompt.id %>/votes">
-        <button type="submit">&#65514;</button>
+        <button class="upvote" type="submit">&#65514;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
       <span><%= @prompt.points %></span>
       <form method="post" action="/prompts/<%= @prompt.id %>/votes">
-        <button type="submit">&#65516;</button>
+        <button class="downvote" type="submit">&#65516;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
+    </div>
+
+    <h2><%= @prompt.title %></h2><span>Created by: <%= @prompt.creator.username %></span>
+    Instructions: <%= @prompt.optional %>
   </div>
-	<h2><%= @prompt.title %></h2>
-	<%= @prompt.optional %>
-	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
-  <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">Add a Comment</a>
+
+  <div class="link-container">
+  	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
+    <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">Add a Comment</a>
+  </div>
+
 </div>
+
+
 
 <% @prompt.shorts.each do |short| %>
 	<div class="short-container">
-  <div class="vote-buttons">
-  <form method="post" action="/shorts/<%= short.id %>/votes">
-    <button type="submit">&#65514;</button>
-    <input type="hidden" name="vote[value]" value="1">
-  </form>
-  <span><%= short.points %></span>
-  <form method="post" action="/shorts/<%= short.id %>/votes">
-    <button type="submit">&#65516;</button>
-    <input type="hidden" name="vote[value]" value="-1">
-  </form>
-</div>
+    <div class="vote-buttons">
+    <form method="post" action="/shorts/<%= short.id %>/votes">
+      <button class="upvote" type="submit">&#65514;</button>
+      <input type="hidden" name="vote[value]" value="1">
+    </form>
+    <span><%= short.points %></span>
+    <form method="post" action="/shorts/<%= short.id %>/votes">
+      <button type="submit">&#65516;</button>
+      <input class="downvote" type="hidden" name="vote[value]" value="-1">
+    </form>
+  </div>
+
   <%= short.body %>
-  <a class="create-link" href="/shorts/<%= short.id %>/comments">Add Comment</a></div>
+  <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
 <% end %>
 
 
