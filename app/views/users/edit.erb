@@ -4,10 +4,10 @@
 
 <form class="create-form" method="post" action="/users">
   <input type="hidden" name="_method" method="put">
-  <input type="text" name="user[username]" placeholder="Create a Username">
-  <input type="email" name="user[email]" placeholder="Email: email@example.com">
-  <input type="password" name="user[password]" placeholder="Create Password">
-  <input type="submit" value="Register">
+  <input type="text" name="user[username]" value="<%= @user.username %>">
+  <input type="email" name="user[email]" value="<%= @user.email %>">
+  <input type="password" name="user[password]" placeholder="Password">
+  <input type="submit" value="Update">
 </form>
 
 We would hate to see you go...but you can delete your account here

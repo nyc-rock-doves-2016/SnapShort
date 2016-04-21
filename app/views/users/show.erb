@@ -1,13 +1,23 @@
 <h2>Hey there, <%= @user.username %>!</h2>
 
-<% @user.prompts.each do |prompt| %>
-  <div class="prompt-container">
-	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a><br>
-	</div>
-<% end %>
+<div class="user-prompts">
+  Your prompts:
 
-<% @user.shorts.each do |short| %>
-	<div class="short-container"
-  <%= short.body %>
-  <a class="create-link" href="/shorts/<%= short.id %>/comments">Add Comment</a></div>
-<% end %>
+  <% @user.prompts.each do |prompt| %>
+    <div class="prompt-container">
+  	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a><br>
+  	</div>
+  <% end %>
+</div>
+
+
+<div class="user-shorts">
+  Your shorts:
+
+  <% @user.shorts.each do |short| %>
+  	<div class="short-container">
+    <a class="short-link" href="/shorts/<%= short.id %>"><%= short.body %></a>
+  <% end %>
+</div>
+
+<a href="/users/<%= @user.id %>/edit" class="create-link">Edit your Account</a>

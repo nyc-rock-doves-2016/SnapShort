@@ -1,8 +1,8 @@
-<h3><%= @short.prompt %></h3>
+<h3><%= @short.prompt.title %></h3>
 
 <div class="short-details">
 <p><%= @short.body %></p>
-<p>written by <%= @short.creator %></p>
+<p>written by <%= @short.creator.username %></p>
 </div>
 
 <form class="delete" action="/shorts/<%= @short.id %>" method="POST">

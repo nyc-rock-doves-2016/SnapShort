@@ -7,4 +7,8 @@ class Short < ActiveRecord::Base
   has_many :votes, as: :votable
 
   validates :body, presence: true
+
+  def points
+    self.votes.sum(:value)
+  end
 end
