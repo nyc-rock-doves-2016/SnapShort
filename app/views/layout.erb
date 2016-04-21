@@ -35,11 +35,13 @@
         <a class="main-link" href="#">ABOUT US</a>
     </nav>
   </header>
+  <% if !logged_in? %>
   <div class="welcome-message">
     <br>
     <h2>Welcome</h2>
     <br>
   </div>
+  <% end %>
   <%= yield %>
   <footer>
     &#169; Copyright 2016
