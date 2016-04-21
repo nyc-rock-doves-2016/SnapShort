@@ -1,14 +1,11 @@
-get '/prompts/:id/comments' do
-
+post '/prompts/:id/votes' do
+  @prompt = Prompt.find(params[:id])
+  @prompt.votes.create(params[:vote])
+  redirect "/prompts/#{@prompt.id}"
 end
 
-post '/prompts/:id/comments' do
-
+post '/shorts/:id/votes' do
+  @short = Short.find(params[:id])
+  @short.votes.create(params[:vote])
+  redirect "/prompts/#{@short.prompt.id}"
 end
-
-
-
-
-# Votes:
-# post 'prompts/:id/comments -create comment
-# post 'shorts/:id/shorts -create comment
