@@ -6,7 +6,7 @@
 </div>
 
 <% @prompt.shorts.each do |short| %>
-	<div class="short-container"
+	<div class="short-container">
   <%= short.body %>
   <a class="create-link" href="/shorts/<%= short.id %>/comments">Add Comment</a></div>
 <% end %>
