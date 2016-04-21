@@ -1,1 +1,92 @@
-david.css
+h3 {
+	font-family: verdana;
+	text-align: center;
+}
+h4 {
+	font-family: verdana;
+}
+
+.short-form {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.create-form {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.short-form-textarea {
+	width: 100%;
+    height: 250px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    resize: none;
+    display: block;
+}
+
+.short-new-button {
+	background-color: #4CAF50;
+	border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.short-details {
+	width: 75%;
+	margin: 0 auto;
+	padding: 0 0 10px 0;
+	border-bottom: solid 1px lightgrey;
+}
+
+.short-author {
+	font-size: .85em;
+}
+
+.prompt-title-creator {
+	width: 75%;
+	margin: 0 auto;
+	border-bottom: solid 1px lightgrey;
+	text-align: center;
+}
+
+.comment-container {
+	width: 75%;
+	margin: 10px auto;
+	padding-bottom: 10px;
+	border-bottom: solid 1px lightgrey;
+}
+
+.comment-body {
+	font-size: .75em;
+}
+
+.comment-date {
+	font-size: .65em;
+	list-style: none;
+}
+
+.comment-form {
+	width: 50%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.comment-form-textarea {
+	width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    resize: none;
+    display: block;
+}
