@@ -1,0 +1,64 @@
+body {
+  width: 75%;
+  margin: auto;
+}
+
+footer {
+  border-top: 1px black solid;
+  padding-top: 20px;
+}
+
+.all-prompts {
+  margin: 20px 0px 0px 0px;
+}
+
+.prompt-snippet {
+  height: 80px;
+  text-align: center;
+  border-top: 1px black solid;
+  line-height: 80px;
+}
+
+.votes-shorts {
+  float: left;
+  display: inline-block;
+  margin-left: 15px;
+  height: 40px;
+  padding: 20px 0px;
+  line-height: 20px;
+}
+
+.vs-text {
+  font-size: 10px;
+}
+
+.creator {
+  float: right;
+  font-size: 12px;
+}
+
+.prompt-link {
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
+}
+
+.prompt-link:hover {
+  color: orange;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
