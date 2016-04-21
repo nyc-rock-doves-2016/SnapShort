@@ -6,7 +6,7 @@ User.create!(username: "Kevin", email: "kevin@kevin.com", password: "abc123")
 
 Prompt.create!(title: "A babysitter is snooping around her employer's house and finds a disturbing photograph...", creator_id: 1)
 
-Prompt.create!(title: "Bob Barker falls in love.", optional: "Have fun!" creator_id: 2)
+Prompt.create!(title: "Bob Barker falls in love.", optional: "Have fun!", creator_id: 2)
 
 Prompt.create!(title: "Identical twins, a party invitation, and a locked closet.", creator_id: 3)
 
