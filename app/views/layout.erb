@@ -15,25 +15,36 @@
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/kevin.css">
 
+  <link rel="stylesheet" href="/css/emily.css">
+
+
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
   <title>SnapShort</title>
 </head>
 <body>
+  <img src="snapshort_logo.png" alt="hai">
   <header>
     <a href='/' class="main-title">SnapShort</a>
     <nav>
       <% if logged_in? %>
-        <a class="main-link" href="/users/<%= session[:id] %>"><%= current_user.username %></a>
-        <a class="main-link" href="/logout">Logout</a>
+        <a class="main-link" href="/users/<%= session[:id] %>"><%= current_user.username.upcase %></a>
+        <a class="main-link" href="/logout">LOGOUT</a>
       <% else %>
-        <a class="main-link" href="/login">Login</a>
-        <a class="main-link" href="/users/new">Register</a>
+        <a class="main-link" href="/login">LOGIN</a>
+        <a class="main-link" href="/users/new">REGISTER</a>
       <% end %>
-        <a class="main-link" href="#">About Us</a>
+        <a class="main-link" href="#">ABOUT US</a>
     </nav>
   </header>
+  <% if !logged_in? %>
+  <div class="welcome-message">
+    <br>
+    <h2>Welcome</h2>
+    <br>
+  </div>
+  <% end %>
   <%= yield %>
   <footer>
     &#169; Copyright 2016

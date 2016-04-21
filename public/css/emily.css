@@ -1,0 +1,40 @@
+body {
+  width: 75%;
+  margin: auto;
+/*  font-family: 'Montserrat', sans-serif;*/
+}
+
+a {
+text-decoration: none;
+}
+
+nav {
+  text-align: right;
+  color: #666666;
+}
+
+nav a:visited {
+    color: #666666;
+}
+
+nav a {
+    margin-left: 30px
+}
+
+footer {
+  text-align: center;
+  clear: both;
+  position: relative;
+  z-index: 10;
+  height: 3em;
+  margin-top: 25em;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-top: 50px;
+  height: 200px;
+  background-color: #F5F5F5;
+  border-radius: 5px
+}
+
