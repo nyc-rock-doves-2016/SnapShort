@@ -1,17 +1,19 @@
 <a class="create-link" href="/prompts/new">Add a new prompt </a>
-<br>
-<% @prompts.each do |prompt| %>
-  <div class="prompt-snippet">
-    <div class="points">
-      <%= prompt.points %><br>
-      Votes
-    </div>
-    <div class="shorts-count">
-      <%= prompt.shorts.count %><br>
-      Shorts
-    </div>
-	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a><br>
-	</div>
-<% end %>
+<div class="all-prompts">
+  <% @prompts.each do |prompt| %>
+    <div class="prompt-snippet">
+      <div class="votes-shorts">
+        <%= prompt.points %><br>
+        <span class="vs-text">Votes</span>
+      </div>
+      <div class="votes-shorts">
+        <%= prompt.shorts.count %><br>
+        <span class="vs-text">Shorts</span>
+      </div>
+  	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a>
+      <span class="creator">Created By: <%= prompt.creator.username %></span>
+  	</div>
+  <% end %>
+</div>
 
 
