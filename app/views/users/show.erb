@@ -1,12 +1,10 @@
-<h2>Hey there, <%= @user.username %>!</h2>
+<h2 class="hey">Hey there, <%= @user.username %>!</h2>
 
 <div class="user-prompts">
   <h3>Your prompts:</h3>
 <ul>
   <% @user.prompts.each do |prompt| %>
-    <div class="prompt-container">
   	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><li><%= prompt.title %></a></li>
-  	</div>
   <% end %>
 </ul>
 </div>
@@ -16,7 +14,6 @@
   <h3>Prompts You Have Shorted:</h3>
 <ul>
   <% @user.shorts.each do |short| %>
-  	<div class="short-container">
     <a class="short-link" href="/shorts/<%= short.id %>"><li><%= short.prompt.title %></a></li>
   <% end %>
 </ul>
