@@ -20,18 +20,32 @@
 
 
 <% if @short %>
+  <div class="prompt-title-creator">
+  <h3><%= @short.prompt.title %></h3>
+  <p>Written by <%= @short.prompt.creator.username.capitalize %></p>
+  </div>
+
+  <div class="short-details">
+  <h4>Short:</h4>
+  <p><%= @short.body %></p>
+  <p class="short-author">Written by <%= @short.creator.username.capitalize %></p>
+  </div>
   <% @short.comments.each do |comment| %>
     <div class="comment-container">
-      <%= comment.body %>
+      <p class="comment-body"><%= comment.body %></p>
+      <li class="comment-date">Created at: <%= comment.created_at.strftime("%d %b. %Y") %></li>
     </div>
   <% end %>
 
 <%= erb :_errors, locals: {errors: @errors} %>
 
-<form class="create-form" method="post" action="/shorts/<%= @short.id %>/comments">
-  <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
+<div class="comment-form">
+<form method="post" action="/shorts/<%= @short.id %>/comments">
+  <textarea class="comment-form-textarea" type="text" name="comment[body]" placeholder="Comment here"></textarea>
   <input type="hidden" name="comment[commentable_type]" value="Short">
   <input type="hidden" name="comment[commentable_id]" value="<%= @short.id %>">
-  <input type="submit" value="Comment!">
+  <button class="short-new-button" type="submit">Comment!</button>
 </form>
+</div>
 <% end %>
+
