@@ -4,7 +4,12 @@ get '/prompts' do
 end
 
 get '/prompts/new' do
-erb :'prompts/new'
+  @user = User.find_by(id: session[:id])
+  if logged_in?
+    erb :'prompts/new'
+  else
+    redirect '/login'
+  end
 end
 
 post '/prompts' do

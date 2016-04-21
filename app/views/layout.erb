@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- 
+  <!--
     normalize.css removes cross-browser differences in defaults, e.g.,
     differences in how form elements appear between Firefox and IE
     See: http://necolas.github.com/normalize.css/
@@ -15,9 +15,19 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>SnapShorts</title>
 </head>
 <body>
+  <a href='/'><h1>SnapShorts</h1></a>
+  <nav>
+    <% if logged_in? %>
+      <a href="/users/<%= session[:id] %>"><%= current_user.username %></a>
+      <a href="/logout">Logout</a>
+    <% else %>
+      <a href="/login">Login</a>
+      <a href="/users/new">Register</a>
+    <% end %>
+  </nav>
   <%= yield %>
 </body>
 </html>

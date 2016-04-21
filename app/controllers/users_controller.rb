@@ -4,12 +4,13 @@ end
 
 
 post "/users" do
-  @user = User.new(params[user])
+  @user = User.new(params[:user])
   if @user.save
-    redirect "/user/#{@user.id}"
+    session[:id] = @user.id
+    redirect "/users/#{@user.id}"
   else
     @errors = @user.errors.full_messages
-    redirect "/users"
+    erb :"users/new"
   end
 end
 
@@ -28,7 +29,7 @@ end
 
 put "/users/:id" do
   @user = User.find_by(id: params[:id])
-  @user.update_attributes(params[user])
+  @user.update_attributes(params[:user])
   @errors = @user.errors.full_messages unless @user.save
   redirect "/users"
 end
