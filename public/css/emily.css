@@ -25,20 +25,15 @@ footer {
   text-align: center;
   clear: both;
   position: relative;
-  z-index: 10;
   height: 3em;
-  margin-top: 25em;
+  margin-top: 50px;
 }
 
 .welcome-message {
   text-align: center;
   margin-top: 50px;
+  margin-bottom: 25px;
   height: 200px;
   background-color: #F5F5F5;
-  border-radius: 5px
+  border-radius: 5px;
 }
-
-<<<<<<< HEAD
-=======
-
->>>>>>> master
