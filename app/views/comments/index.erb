@@ -1,0 +1,33 @@
+<% if @prompt %>
+  <% @prompt.comments.each do |comment| %>
+    <%= comment.body %>
+  <% end %>
+
+  <%= erb :_errors, locals: {errors: @errors} %>
+
+  <form method="post" action="/prompts/<%= @prompt.id %>/comments">
+    <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
+    <input type="hidden" name="comment[commentable_type]" value="Prompt">
+    <input type="hidden" name="comment[commentable_id]" value="<%= @prompt.id %>">
+    <input type="submit" value="Comment!">
+  </form>
+<% end %>
+
+
+
+
+
+<% if @short %>
+<% @short.comments.each do |comment| %>
+  <%= comment.body %>
+<% end %>
+
+<%= erb :_errors, locals: {errors: @errors} %>
+
+<form method="post" action="/shorts/<%= @short.id %>/comments">
+  <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
+  <input type="hidden" name="comment[commentable_type]" value="Short">
+  <input type="hidden" name="comment[commentable_id]" value="<%= @short.id %>">
+  <input type="submit" value="Comment!">
+</form>
+<% end %>

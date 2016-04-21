@@ -1,10 +1,12 @@
 <%= @prompt.title %>
 <%= @prompt.optional %>
 
+<a href="/prompts/<%=@prompt.id%>/comments">Add a Comment</a>
 <a href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
 
 <% @prompt.shorts.each do |short| %>
   <%= short.body %>
+  <a href="/shorts/<%= short.id %>/comments">Add Comment</a>
 <% end %>
 
 <form action="/prompts/<%= @prompt.id %>" method="post">
