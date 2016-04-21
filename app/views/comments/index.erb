@@ -1,11 +1,13 @@
 <% if @prompt %>
   <% @prompt.comments.each do |comment| %>
-    <%= comment.body %>
+    <div class="comment-container">
+      <%= comment.body %>
+    </div>
   <% end %>
 
   <%= erb :_errors, locals: {errors: @errors} %>
 
-  <form method="post" action="/prompts/<%= @prompt.id %>/comments">
+  <form class="create-form" method="post" action="/prompts/<%= @prompt.id %>/comments">
     <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
     <input type="hidden" name="comment[commentable_type]" value="Prompt">
     <input type="hidden" name="comment[commentable_id]" value="<%= @prompt.id %>">
@@ -18,13 +20,15 @@
 
 
 <% if @short %>
-<% @short.comments.each do |comment| %>
-  <%= comment.body %>
-<% end %>
+  <% @short.comments.each do |comment| %>
+    <div class="comment-container">
+      <%= comment.body %>
+    </div>
+  <% end %>
 
 <%= erb :_errors, locals: {errors: @errors} %>
 
-<form method="post" action="/shorts/<%= @short.id %>/comments">
+<form class="create-form" method="post" action="/shorts/<%= @short.id %>/comments">
   <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
   <input type="hidden" name="comment[commentable_type]" value="Short">
   <input type="hidden" name="comment[commentable_id]" value="<%= @short.id %>">

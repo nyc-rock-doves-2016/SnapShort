@@ -2,7 +2,7 @@
 
 <h4>Write a Short</h4>
 
-<form action="/prompts/<%= @prompt.id %>/shorts" method="POST">
+<form class="create-form" action="/prompts/<%= @prompt.id %>/shorts" method="POST">
   <textarea name="short[body]" rows="10" placeholder="Body"></textarea>
   <input type="hidden" name="short[creator_id]" value="<%= @user.id %>">
   <input type="hidden" name="short[prompt_id]" value="<%= @prompt.id %>">

@@ -47,4 +47,45 @@ post 'prompts/:id/comments -create comment
 post 'shorts/:id/shorts -create comment
 
 
+##########################################
+
+(name: element name, erb name, desc, css selector)
+
+Overall:
+.create-link: any link to a create page
+.delete: any delete button ('.delete button')
+.create-form: all forms used to create object
+
+
+Layout:
+header: SnapShort and nav container
+.main-title: a, SnapShort home link
+nav: main navbar
+.main-link: a, navbar elements
+
+
+Prompts:
+.prompt-container: div, index, prompt attr container (also in users/show.erb)
+.prompt-link: a, index, prompt title link
+.prompt-details: div, show, prompt title/optional/comment container
+.short-container: show, short body/comment container (also in users/show.erb)
+
+
+Shorts:
+.short-details: div, show, short body/author
+
+
+Sessions:
+.login-form: form, new, login form
+
+
+Comments:
+.comment-container: div, index, comment body container
+
+
+
+
+
+
+
 
