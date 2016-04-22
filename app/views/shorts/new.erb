@@ -3,9 +3,9 @@
 <div class="short-form">
 <h4>Write a Short:</h4>
 
-	<form class="prompt-form pure-form" action="/prompts/<%= @prompt.id %>/shorts" method="POST">
+	<form class="hello prompt-form pure-form" action="/prompts/<%= @prompt.id %>/shorts" method="POST">
 	  <fieldset class=".pure-group">
-	  <textarea class="pure-u-1" type="text" name="short[body]"placeholder="Body"></textarea>
+	  <textarea id="hi" class="pure-u-1 " type="text" name="short[body]"placeholder="Body"></textarea>
 	  <br>
 	  <input type="hidden" name="short[creator_id]" value="<%= @user.id %>">
 	  <input type="hidden" name="short[prompt_id]" value="<%= @prompt.id %>">

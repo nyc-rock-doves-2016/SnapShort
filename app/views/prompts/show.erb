@@ -34,25 +34,7 @@
 
 <div class="all-shorts">
   <% @prompt.shorts.each do |short| %>
-  	<div class="short-container">
-      <div class="vote-buttons">
-      <form class="vote-form" method="post" action="/shorts/<%= short.id %>/votes">
-        <button class="upvote" type="submit">&#9650;</button>
-        <input type="hidden" name="vote[value]" value="1">
-      </form>
-      <span class="points push-left-10"><%= short.points %></span>
-      <form class="vote-form" method="post" action="/shorts/<%= short.id %>/votes">
-        <button class="downvote" type="submit">&#9660;</button>
-        <input type="hidden" name="vote[value]" value="-1">
-      </form>
-    </div>
-<div class="short-body-show">
-    <%= short.body %><br>
-    <br>Written by: <%= short.creator.username %>
-    </div>
-<div class='push-20' >
-    <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
-</div>
+  <%= erb :'_short', layout: false, locals: {short: short} %>
   <% end %>
 </div>
 
@@ -60,6 +42,19 @@
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="DELETE PROMPT">
 </form>
-
-
+<% if logged_in? %>
+<div class="short-form">
+<h4>Write a Short:</h4>
+  <form class="prompt-form pure-form hello" action="/prompts/<%= @prompt.id %>/shorts" method="POST">
+    <fieldset class=".pure-group">
+    <textarea class="pure-u-1 hi" type="text" name="short[body]"placeholder="Body"></textarea>
+    <br>
+    <input type="hidden" name="short[creator_id]" value="<%= @user.id %>">
+    <input type="hidden" name="short[prompt_id]" value="<%= @prompt.id %>">
+    <br>
+    </fieldset>
+    <button class="create-link" type="submit">Create</button>
+  </form>
+</div>
+<% end %>
 
