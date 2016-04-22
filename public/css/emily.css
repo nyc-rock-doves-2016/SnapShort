@@ -34,10 +34,15 @@ footer {
 }
 
 .welcome-message {
-  text-align: center;
+  text-align: left;
   margin-top: 50px;
   margin-bottom: 25px;
   height: 200px;
   background-color: #F5F5F5;
   border-radius: 5px;
+  font-size: 25px;
+}
+
+.left-welcome {
+  margin-left: 25px
 }

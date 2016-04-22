@@ -12,9 +12,13 @@ post '/prompts/:id/shorts' do
 	@prompt = Prompt.find(params[:id])
 	@short = Short.new(params[:short])
 
-	if @short.save
-		redirect "prompts/#{@prompt.id}"
-	else
+	if @short.save && request.xhr? && logged_in?
+		erb :'_short', locals: {short: @short}, layout: false
+
+
+	elsif @short.save && logged_in?
+    redirect "prompts/#{@prompt.id}"
+  else
 		erb :'/shorts/new'
 	end
 end
