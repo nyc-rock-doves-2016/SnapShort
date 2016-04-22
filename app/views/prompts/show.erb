@@ -3,12 +3,12 @@
   <div class="prompt-container">
 
     <div class="vote-buttons">
-      <form method="post" action="/prompts/<%= @prompt.id %>/votes">
+      <form class="vote-form" method="post" action="/prompts/<%= @prompt.id %>/votes">
         <button class="upvote" type="submit">&#9650;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
-      <span><%= @prompt.points %></span>
-      <form method="post" action="/prompts/<%= @prompt.id %>/votes">
+      <span class="points"><%= @prompt.points %></span>
+      <form class="vote-form" method="post" action="/prompts/<%= @prompt.id %>/votes">
         <button class="downvote" type="submit">&#9660;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
@@ -23,7 +23,11 @@
 
   <div class="link-container">
   	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
-    <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">See Comments</a>
+    <a class="create-link comment-link" href="/prompts/<%=@prompt.id%>/comments">See Comments</a>
+  </div>
+
+  <div class="comments-show">
+    <%= erb :'/comments/_promptcomments' %>
   </div>
 </div>
 
@@ -38,10 +42,9 @@
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="DELETE PROMPT">
 </form>
-
+<% if logged_in? %>
 <div class="short-form">
 <h4>Write a Short:</h4>
-
   <form class="prompt-form pure-form hello" action="/prompts/<%= @prompt.id %>/shorts" method="POST">
     <fieldset class=".pure-group">
     <textarea class="pure-u-1 hi" type="text" name="short[body]"placeholder="Body"></textarea>
@@ -53,6 +56,5 @@
     <button class="create-link" type="submit">Create</button>
   </form>
 </div>
-
-
+<% end %>
 
