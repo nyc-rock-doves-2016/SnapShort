@@ -28,13 +28,13 @@
   font-size: 12px;
 }
 
-.prompt-link {
+.prompt-link, .short-link {
   text-decoration: none;
   font-weight: 800;
   color: black;
 }
 
-.prompt-link:hover {
+.prompt-link:hover, .short-link:hover {
   color: orange;
 }
 
@@ -93,7 +93,7 @@ textarea {
   margin-bottom: 25px;
   height: 150px;
   text-align: center;
-  margin-top: 50px
+  margin-top: 50px;
 }
 
 .created {
@@ -126,7 +126,6 @@ textarea {
   border-top: 0.5px solid black;
   padding: 20px;
   margin-top: 20px;
-
 }
 
 .short-body-show {

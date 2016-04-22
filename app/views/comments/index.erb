@@ -1,7 +1,7 @@
 <% if @prompt %>
   <div class="prompt-title-creator">
-  <h3><%= @prompt.title %></h3>
-  <p>Written by <%= @prompt.creator.username.capitalize %></p>
+  <a class="prompt-link" href="/prompts/<%= @prompt.id %>"><h3><%= @prompt.title %></h3></a>
+  <p>Created by <%= @prompt.creator.username.capitalize %></p>
   </div>
   <div class="short-details">
   <h4>Short:</h4>
@@ -11,7 +11,7 @@
   <% @prompt.comments.each do |comment| %>
     <div class="comment-container">
       <p class="comment-body"><%= comment.body %></p>
-      <li class="comment-date">Created at: <%= comment.created_at.strftime("%d %b. %Y") %></li>
+      <li class="comment-date">Created on: <%= comment.created_at.strftime("%d %b. %Y") %></li>
     </div>
   <% end %>
 
@@ -37,8 +37,8 @@
 
 <% if @short %>
   <div class="prompt-title-creator">
-  <h3><%= @short.prompt.title %></h3>
-  <p>Written by <%= @short.prompt.creator.username.capitalize %></p>
+  <a class="short-link" href="/prompts/<%= @short.prompt.id %>"><h3><%= @short.prompt.title %></h3></a>
+  <p>Created by <%= @short.prompt.creator.username.capitalize %></p>
   </div>
 
   <div class="short-details">
@@ -49,7 +49,7 @@
   <% @short.comments.each do |comment| %>
     <div class="comment-container">
       <p class="comment-body"><%= comment.body %></p>
-      <li class="comment-date">Created at: <%= comment.created_at.strftime("%d %b. %Y") %></li>
+      <li class="comment-date">Created on: <%= comment.created_at.strftime("%d %b. %Y") %></li>
     </div>
   <% end %>
 
