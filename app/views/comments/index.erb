@@ -1,18 +1,34 @@
 <% if @prompt %>
+  <div class="prompt-title-creator">
+  <h3><%= @prompt.title %></h3>
+  <p>Written by <%= @prompt.creator.username.capitalize %></p>
+  </div>
+  <div class="short-details">
+  <h4>Short:</h4>
+  <p><%= @prompt.shorts %></p>
+  <p class="short-author">Written by <%= @prompt.creator.username.capitalize %></p>
+  </div>
   <% @prompt.comments.each do |comment| %>
     <div class="comment-container">
-      <%= comment.body %>
+      <p class="comment-body"><%= comment.body %></p>
+      <li class="comment-date">Created at: <%= comment.created_at.strftime("%d %b. %Y") %></li>
     </div>
   <% end %>
 
   <%= erb :_errors, locals: {errors: @errors} %>
-
-  <form class="create-form" method="post" action="/prompts/<%= @prompt.id %>/comments">
-    <textarea type="text" name="comment[body]" placeholder="Comment here"></textarea>
+  
+  <div class="comment-form">
+  <form class="prompt-form pure-form" method="post" action="/prompts/<%= @prompt.id %>/comments">
+    <fieldset class=".pure-group">
+    <textarea class="pure-u-1" type="text" name="comment[body]" placeholder="Comment here"></textarea>
+    <br>
     <input type="hidden" name="comment[commentable_type]" value="Prompt">
     <input type="hidden" name="comment[commentable_id]" value="<%= @prompt.id %>">
-    <input type="submit" value="Comment!">
+    <br>
+    </fieldset>
+    <button class="create-link" type="submit">Submit</button>
   </form>
+  </div>
 <% end %>
 
 
@@ -40,11 +56,14 @@
 <%= erb :_errors, locals: {errors: @errors} %>
 
 <div class="comment-form">
-<form method="post" action="/shorts/<%= @short.id %>/comments">
-  <textarea class="comment-form-textarea" type="text" name="comment[body]" placeholder="Comment here"></textarea>
+<form class="prompt-form pure-form" method="post" action="/shorts/<%= @short.id %>/comments">
+  <fieldset class=".pure-group">
+  <textarea class="pure-u-1" type="text" name="comment[body]" placeholder="Comment here"></textarea>
   <input type="hidden" name="comment[commentable_type]" value="Short">
   <input type="hidden" name="comment[commentable_id]" value="<%= @short.id %>">
-  <button class="short-new-button" type="submit">Comment!</button>
+  <br>
+  </fieldset>
+  <button class="create-link" type="submit">Comment!</button>
 </form>
 </div>
 <% end %>

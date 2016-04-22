@@ -1,7 +1,12 @@
 <h2>Login</h2>
 
-<form class="login-form" method="post" action="/login">
+<div class="comment-form">
+<form class="prompt-form pure-form" method="post" action="/login">
+  <fieldset class=".pure-group">
   <input type='text' name='user[username]' placeholder='Username'>
   <input type='password' name='user[password]' placeholder='Password'>
-  <input class="create-link" type="submit" value="Login">
+  </fieldset>
+  <br>
+  <button class="create-link" type="submit">Login</button>
 </form>
+</div>

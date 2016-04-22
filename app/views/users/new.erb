@@ -2,9 +2,13 @@
 
 <%= erb :_errors, locals: {errors: @errors} %>
 
-<form class="create-form" method="post" action="/users">
+<div class="comment-form">
+<form class="prompt-form pure-form" method="post" action="/users">
+  <fieldset class=".pure-group">
   <input type="text" name="user[username]" placeholder="Create a Username">
   <input type="email" name="user[email]" placeholder="Email: email@example.com">
   <input type="password" name="user[password]" placeholder="Create Password">
-  <input class="create-link" type="submit" value="Register">
-</form>
+  </fieldset>
+  <br>
+  <button class="create-link" type="submit">Register</button>
+</div>
