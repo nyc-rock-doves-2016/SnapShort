@@ -4,12 +4,12 @@
 
     <div class="vote-buttons">
       <form method="post" action="/prompts/<%= @prompt.id %>/votes">
-        <button class="upvote" type="submit">&#65514;</button>
+        <button class="upvote" type="submit">&#9650;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
       <span><%= @prompt.points %></span>
       <form method="post" action="/prompts/<%= @prompt.id %>/votes">
-        <button class="downvote" type="submit">&#65516;</button>
+        <button class="downvote" type="submit">&#9660;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
     </div>
@@ -23,9 +23,8 @@
 
   <div class="link-container">
   	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
-    <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">Add a Comment</a>
+    <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">See Comments</a>
   </div>
-
 </div>
 
 
@@ -34,17 +33,18 @@
   	<div class="short-container">
       <div class="vote-buttons">
       <form method="post" action="/shorts/<%= short.id %>/votes">
-        <button class="upvote" type="submit">&#65514;</button>
+        <button class="upvote" type="submit">&#9650;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
       <span class="push-left-10"><%= short.points %></span>
       <form method="post" action="/shorts/<%= short.id %>/votes">
-        <button class="downvote" type="submit">&#65516;</button>
+        <button class="downvote" type="submit">&#9660;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
     </div>
 <div class="short-body-show">
-    <%= short.body %>
+    <%= short.body %><br>
+    <br>Written by: <%= short.creator.username %>
 <div class='push-20' >
     <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
   <% end %>
