@@ -30,6 +30,10 @@ $(document).ready(function(){
   		$('.prompt-comment').find('textarea').val("")
   	})
 
+    requestObject.fail(function(jqXHR){
+      alert(jqXHR.responseText);
+    })
+
   });
 
 
