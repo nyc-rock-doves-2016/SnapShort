@@ -3,11 +3,7 @@
   <a class="prompt-link" href="/prompts/<%= @prompt.id %>"><h3><%= @prompt.title %></h3></a>
   <p>Created by <%= @prompt.creator.username.capitalize %></p>
   </div>
-  <div class="short-details">
-  <h4>Short:</h4>
-  <p><%= @prompt.shorts %></p>
-  <p class="short-author">Written by <%= @prompt.creator.username.capitalize %></p>
-  </div>
+  
   <% @prompt.comments.each do |comment| %>
     <div class="comment-container">
       <p class="comment-body"><%= comment.body %></p>
