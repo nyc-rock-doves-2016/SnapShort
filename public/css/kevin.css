@@ -126,7 +126,8 @@ textarea {
 
 .short-body-show {
   position: relative;
-  margin-left: 35px
+  margin-left: 35px;
+  margin-top: 30px;
 }
 
 .push-20 {
