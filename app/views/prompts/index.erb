@@ -5,13 +5,13 @@
       <div class="prompt-snippet">
         <div class="votes-shorts">
           <%= prompt.points %><br>
-          <span class="vs-text">Votes</span>
+          <span class="vs-text"><%= prompt.points == 1 ? 'Vote ' : 'Votes' %></span>
         </div>
         <div class="votes-shorts">
           <%= prompt.shorts.count %><br>
-          <span class="vs-text">Shorts</span>
+          <span class="vs-text"><%= prompt.shorts.count == 1 ? 'Short ' : 'Shorts' %></span>
         </div>
-    	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title %></a>
+    	  <a class="prompt-link" href="/prompts/<%= prompt.id %>"><%= prompt.title.length > 60 ? prompt.title[0..60] + '...' : prompt.title %></a>
         <span class="creator">Created By: <%= prompt.creator.username %></span>
     	</div>
     <% end %>

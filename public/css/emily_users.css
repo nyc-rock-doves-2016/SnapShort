@@ -19,10 +19,18 @@
   font-size: 20px
 }
 
-a:hover {
+.user-links {
+    color: #666666;
+}
+
+.user-links:hover {
     color: orange;
 }
 
 .prompt-link, .short-link {
   color: #000000;
+}
+
+.orange {
+  color: orange;
 }
