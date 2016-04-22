@@ -8,8 +8,8 @@
   <div class="comments-and-form">
   <% @prompt.comments.each do |comment| %>
     <div class="comment-container">
-      <p class="comment-body"><%= comment.body %></p>
-      <li class="comment-date">Created on: <%= comment.created_at.strftime("%d %b. %Y") %></li>
+      <p class="prompt comment-body"><%= comment.body %></p>
+      <li class="prompt comment-date">Created on: <%= comment.created_at.strftime("%d %b. %Y") %></li>
     </div>
   <% end %>
 
