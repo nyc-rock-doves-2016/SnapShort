@@ -59,11 +59,14 @@
 
 .comment-body {
 	font-size: .75em;
+
 }
 
 .comment-date {
 	font-size: .65em;
 	list-style: none;
+	padding-bottom: 10px;
+	border-bottom: solid 1px lightgrey;
 }
 
 .comment-form {

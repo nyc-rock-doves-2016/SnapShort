@@ -1,7 +1,9 @@
 get '/prompts/:id/comments' do
   @prompt = Prompt.find(params[:id])
   @user = User.find_by(id: session[:id])
-  if logged_in?
+  if logged_in? && request.xhr?
+    erb :'comments/_promptcomments'
+  elsif logged_in?
     erb :'comments/index'
   else
     redirect '/login'
@@ -21,7 +23,10 @@ end
 post '/prompts/:id/comments' do
   @prompt = Prompt.find(params[:id])
   @comment = Comment.new(params[:comment])
-    if @comment.save
+
+    if @comment.save && request.xhr?
+      erb :'comments/_comments', layout: false, locals: {comment: @comment}
+    elsif @comment.save
       redirect "/prompts/#{@prompt.id}/comments"
     else
       @errors = @comment.errors.full_messages
