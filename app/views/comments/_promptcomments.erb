@@ -1,0 +1,23 @@
+ <div class="comments-and-form">
+  <% @prompt.comments.each do |comment| %>
+    <div class="comment-container">
+      <p class="comment-body"><%= comment.body %></p>
+      <li class="comment-date">Created on: <%= comment.created_at.strftime("%d %b. %Y") %></li>
+  <% end %>
+    </div>
+
+  <%= erb :_errors, locals: {errors: @errors} %>
+  
+  <div class="comment-form">
+  <form class="prompt-form pure-form" method="post" action="/prompts/<%= @prompt.id %>/comments">
+    <fieldset class=".pure-group">
+    <textarea class="pure-u-1" type="text" name="comment[body]" placeholder="Comment here"></textarea>
+    <br>
+    <input type="hidden" name="comment[commentable_type]" value="Prompt">
+    <input type="hidden" name="comment[commentable_id]" value="<%= @prompt.id %>">
+    <br>
+    </fieldset>
+    <button class="create-link" type="submit">Submit</button>
+  </form>
+  </div>
+</div>
