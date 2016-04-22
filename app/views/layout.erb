@@ -44,19 +44,20 @@
         <a class="main-link" href="/login">LOGIN</a>
         <a class="main-link" href="/users/new">REGISTER</a>
       <% end %>
-        <a class="main-link" href="#">ABOUT US</a>
+        <a class="main-link" href="/about">ABOUT US</a>
     </nav>
   </header>
   <% if !logged_in? %>
   <div class="welcome-message">
     <br>
     <h2>Welcome</h2>
+    <p>This is the welcome message, here is will we will describe thingzzz</p>
     <br>
   </div>
   <% end %>
   <%= yield %>
   <footer>
-    &#169; Copyright 2016
+    <span class="orange">&#169;</span> Copyright 2016 | 
     Emily Osowski, David Lange, Kevin Perkins
   </footer>
 </body>
