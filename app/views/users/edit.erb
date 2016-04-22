@@ -1,4 +1,4 @@
-<h2>Hey <%= @user.username %>, you can change your ussername, password, and email here:</h2>
+<h2>Hey <%= @user.username %>, you can change your username and email here:</h2>
 
 <%= erb :_errors, locals: {errors: @errors} %>
 
@@ -15,7 +15,7 @@
 </form>
 </div>
 
-We would hate to see you go...but you can delete your account here
+<br>We would hate to see you go...but you can delete your account here:
 
 <form class="delete create-link" method="post" action="/users/<%= @user.id %>">
   <input type="hidden" name="_method" method="delete">
