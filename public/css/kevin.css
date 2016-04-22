@@ -148,8 +148,16 @@ textarea {
   margin-left: 10px
 }
 
+.center {
+  text-align: center;
+  margin: auto;
+  width: 80%;
+}
 
-
+.us {
+  width: 40%;
+  margin-left: 30%;
+}
 
 
 
