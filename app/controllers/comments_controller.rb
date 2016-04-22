@@ -24,7 +24,9 @@ post '/prompts/:id/comments' do
   @prompt = Prompt.find(params[:id])
   @comment = Comment.new(params[:comment])
 
-    if @comment.save && request.xhr?
+    if !logged_in?
+      [401, "You must log in to do this"]
+    elsif @comment.save && request.xhr?
       erb :'comments/_comments', layout: false, locals: {comment: @comment}
     elsif @comment.save
       redirect "/prompts/#{@prompt.id}/comments"

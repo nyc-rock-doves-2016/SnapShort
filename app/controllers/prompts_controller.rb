@@ -23,6 +23,7 @@ end
 
 get '/prompts/:id' do
   @prompt = Prompt.find_by(id: params[:id])
+  @user = User.find_by(id: session[:id])
   erb :'/prompts/show'
 end
 
