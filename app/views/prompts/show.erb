@@ -24,6 +24,8 @@
   <div class="link-container">
   	<a class="create-link" href="/prompts/<%=@prompt.id%>/shorts">Create a Short</a>
     <a class="create-link" href="/prompts/<%=@prompt.id%>/comments">Add a Comment</a>
+
+
   </div>
 
 </div>
@@ -37,19 +39,23 @@
         <button class="upvote" type="submit">&#65514;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
-      <span><%= short.points %></span>
+      <span class="push-left-10"><%= short.points %></span>
       <form method="post" action="/shorts/<%= short.id %>/votes">
         <button class="downvote" type="submit">&#65516;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
     </div>
-
+<div class="short-body-show">
     <%= short.body %>
+<div class='push-20' >
     <a class="create-link" href="/shorts/<%= short.id %>/comments">See Comments</a></div>
   <% end %>
 </div>
 
-<form class="delete" action="/prompts/<%= @prompt.id %>" method="post">
+<form class="delete create-link" action="/prompts/<%= @prompt.id %>" method="post">
   <input type="hidden" name="_method" value="delete">
   <input type="submit" value="DELETE PROMPT">
 </form>
+
+
+
