@@ -1,7 +1,9 @@
 get '/prompts/:id/comments' do
   @prompt = Prompt.find(params[:id])
   @user = User.find_by(id: session[:id])
-  if logged_in?
+  if logged_in? && request.xhr?
+    erb :'comments/_promptcomments'
+  elsif logged_in?
     erb :'comments/index'
   else
     redirect '/login'

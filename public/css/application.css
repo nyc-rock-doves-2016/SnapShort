@@ -4,6 +4,11 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
+
+.comments-show {
+	display: none;
+}
+
 th {
   text-align: left;
 }
