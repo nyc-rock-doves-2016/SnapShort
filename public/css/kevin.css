@@ -71,9 +71,7 @@ textarea {
 
 .vote-buttons {
   display: inline-block;
-  height: 115px;
-  border: 1px solid black;
-  float: left;
+  height: 115px;  float: left;
 
 }
 
@@ -87,25 +85,28 @@ textarea {
 
 .prompt-title {
   display: inline-block;
-  border: 1px solid black;
   margin: 0px;
+  font-size: 1.5em;
+  margin-top: 30px
 }
 
 .prompt-container {
   margin-bottom: 25px;
   height: 150px;
   text-align: center;
-  border: 0.5px solid black;
+  margin-top: 50px
 }
 
 .created {
-  float: right;
-  bottom: 0;
+  display: block;
+  margin: 20px auto 0px auto;
 }
 
 .instructions {
-  display: inline-block;
+  display: block;
   margin: 20px 0px;
+  background-color: #F5F5F5;
+  padding: 10px;
 }
 
 .link-container {
@@ -122,8 +123,24 @@ textarea {
   margin-top: 50px;
 }
 
+.short-body-show {
+  position: relative;
+  margin-left: 35px
+}
 
+.push-20 {
+  margin-top: 20px
+}
 
+.delete {
+/*  display: inline;*/
+  background-color: gray;
+  float: right;
+}
+
+.push-left-10 {
+  margin-left: 10px
+}
 
 
 
