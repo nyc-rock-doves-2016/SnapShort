@@ -10,11 +10,11 @@ post '/prompts/:id/votes' do
 end
 
 post '/shorts/:id/votes' do
-  @short = Short.find(params[:id])
-  @short.votes.create(params[:vote])
+  short = Short.find(params[:id])
+  short.votes.create(params[:vote])
   if request.xhr?
-    return "#{@short.points}"
+    return "#{short.points}"
   else
-    redirect "/prompts/#{@short.id}"
+    redirect "/shorts/#{short.id}"
   end
 end
