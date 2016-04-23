@@ -1,11 +1,11 @@
     <div class="short-container">
       <div class="vote-buttons">
-      <form method="post" action="/shorts/<%= short.id %>/votes">
+      <form class="vote-form" method="post" action="/shorts/<%= short.id %>/votes">
         <button class="upvote" type="submit">&#9650;</button>
         <input type="hidden" name="vote[value]" value="1">
       </form>
-      <span class="push-left-10"><%= short.points %></span>
-      <form method="post" action="/shorts/<%= short.id %>/votes">
+      <span class="points push-left-10"><%= short.points %></span>
+      <form class="vote-form" method="post" action="/shorts/<%= short.id %>/votes">
         <button class="downvote" type="submit">&#9660;</button>
         <input type="hidden" name="vote[value]" value="-1">
       </form>
